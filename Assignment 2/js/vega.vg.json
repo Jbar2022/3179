@@ -58,8 +58,8 @@
         "title": "Log Scale CO2 Emissions (Tons)",
         "scale": {
           "type": "threshold",
-          "domain": [0.01, 0.1, 1, 10],
-          "range": ["#B1aeae", "#ffffb2", "#fecc5c", "#fd8d3c", "#e31a1c"]
+          "domain": [0.1, 1, 10],
+          "range": ["#ffffb2", "#fecc5c", "#fd8d3c", "#e31a1c"]
           }
           
       },
