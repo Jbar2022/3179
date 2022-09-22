@@ -18,7 +18,7 @@
         "key": "Country Name",
         "fields": ["2019"]
       }
-    }
+    } 
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
@@ -28,8 +28,8 @@
       "title": "CO2 Emissions on Log scale",
       "scale": {
         "type": "threshold",
-        "domain": [0.01, 0.1, 1, 10],
-        "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603", "#920208"]
+        "domain": [0.0002, 0.01, 0.1, 1, 10],
+        "range": ["#B1aeae", "#ffffb2", "#fecc5c", "#fd8d3c", "#f03b20", "#bd0026"]
         }
         
     },
