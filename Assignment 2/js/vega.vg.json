@@ -4,11 +4,7 @@
   "width": 650,
   "height": 400,
   "projection": {"type": "equalEarth"},
-  
-
-
   "layer": [
-    
     {
       "data": {
         "url": "https://raw.githubusercontent.com/Jbar2022/3179/main/Assignment%202/js/ne_110m_oceans.json",
