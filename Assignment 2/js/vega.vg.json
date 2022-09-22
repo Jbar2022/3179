@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "CO2 Emission Per Country (2019)",
-  "width": 800,
+  "title": "Metric Tons of CO2 Emission Per Person (2019)",
+  "width": 700,
   "height": 400,
   "projection": {"type": "equalEarth"},
   "data": {
@@ -25,11 +25,17 @@
     "color": {
       "field": "2019",
       "type": "quantitative",
-      "scale": {"type": "log"}
+      "title": "CO2 Emissions on Log scale",
+      "scale": {
+        "type": "threshold",
+        "domain": [0.01, 0.1, 1, 10],
+        "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603", "#920208"]
+        }
+        
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country Name"},
-      {"field": "2019", "type": "quantitative"}
+      {"field": "2019", "type": "quantitative", "title": "2019 CO2 emissions"}
     ]
   }
 }
