@@ -21,11 +21,12 @@
     } 
   ],
   "mark": {"type": "geoshape"},
+  "background": "#CCEAF4",
   "encoding": {
     "color": {
       "field": "2019",
       "type": "quantitative",
-      "title": "CO2 Emissions on Log scale",
+      "title": "Log Scale of CO2 Ton Emissions",
       "scale": {
         "type": "threshold",
         "domain": [0.0002, 0.01, 0.1, 1, 10],
