@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Metric Tons of CO2 Emission Per Person (2019)",
-  "width": 650,
+  "width": 600,
   "height": 400,
   "projection": {"type": "equalEarth"},
   "layer": [
