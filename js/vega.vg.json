@@ -65,7 +65,7 @@
       },
       "tooltip": [
         {"field": "properties.NAME", "type": "nominal", "title": "Country Name"},
-        {"field": "2019", "type": "quantitative", "title": "2019 CO2 Emissions per Person"}
+        {"field": "2019", "type": "quantitative", "title": "CO2 Emissions per Person"}
         ]
       }
     }
