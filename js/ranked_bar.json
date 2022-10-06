@@ -1,0 +1,30 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Ranking of Country CO2 Per Capita",
+    "width": 800,
+    "height": 400,
+    "data": {
+          "url": "https://raw.githubusercontent.com/Jbar2022/3179/main/data/CO2_emission"
+        },
+
+    "layer": [{
+          "mark": "bar",
+          "encoding": {
+            "x": {"field": "Country Name", "type": "nominal", "axis": {"labelAngle": 0}},
+            "y": {"field": "2019", "type": "quantitative"}
+          }
+        },
+    {
+        "mark": "bar",
+        "transform": [
+          {"filter": "datum.Value >= 2.31"},
+          {"calculate": "2.31", "as": "baseline"}
+        ],
+        "encoding": {"x": {"field": "Day", "type": "ordinal"},
+        "y": {"field": "baseline", "type": "quantitative", "title": "PM2.5 Value"},
+        "y2": {"field": "Value"},
+        "color": {"value": "#e45755"}
+      }
+    }
+    ]}
+    
