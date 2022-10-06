@@ -3,11 +3,12 @@
     "title": "Ranking of Country CO2 Per Capita",
     "width": 800,
     "height": 400,
-    "data": {
-          "url": "https://raw.githubusercontent.com/Jbar2022/3179/main/data/CO2_emission"
-        },
 
     "layer": [{
+      "data": {
+        "url": "https://raw.githubusercontent.com/Jbar2022/3179/main/data/CO2_emission"
+      },
+        "layer": [{
           "mark": "bar",
           "encoding": {
             "x": {"field": "Country Name", "type": "nominal", "axis": {"labelAngle": 0}},
@@ -20,11 +21,33 @@
           {"filter": "datum.Value >= 2.31"},
           {"calculate": "2.31", "as": "baseline"}
         ],
-        "encoding": {"x": {"field": "Day", "type": "ordinal"},
+        "encoding": {"x": {"field": "Country Name", "type": "nominal"},
         "y": {"field": "baseline", "type": "quantitative", "title": "PM2.5 Value"},
         "y2": {"field": "Value"},
         "color": {"value": "#e45755"}
       }
     }
-    ]}
+]}, {
+  "data": {
+     "values": [{}]
+  },
+  "encoding": {
+    "y": {"datum": 300}
+  },
+  "layer": [{
+    "mark": "rule"
+  }, {
+    "mark": {
+      "type": "text",
+      "align": "right",
+      "baseline": "bottom",
+      "dx": -2,
+      "dy": -2,
+      "x": "width",
+      "text": "hazardous"
+    }
+  }]
+}
+]
+}
     
