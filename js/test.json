@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "The PM2.5 value of Beijing observed 15 days, highlighting the days when PM2.5 level is hazardous to human health. Data source https://chartaccent.github.io/chartaccent.html",
-      "layer": [{
+    "layer": [{
         "data": {
           "values": [
-            {"Day": 1, "Value": 54.8},
+            {"Day": 1, "Value": 70},
             {"Day": 2, "Value": 112.1},
             {"Day": 3, "Value": 63.6},
             {"Day": 4, "Value": 37.6},
@@ -63,3 +63,4 @@
       }
     ]
   }
+  
