@@ -20,10 +20,12 @@
           "filter": "datum.rank <= 25"
         }
       ],
-      "mark": "bar",
+      "mark": {"type": "bar"},
       "encoding": {
         "x": {"field": "Country Name", "type": "nominal", "axis": {"labelAngle": 270}, "sort": { "field": "2019", "op": "average", "order":"descending"}},
-        "y": {"field": "2019", "type": "quantitative"}
+        "y": {"field": "2019", "type": "quantitative"},
+      "tooltip": [{"field": "2019", "type": "quantitative"}, 
+      {"field": "Country Name", "type": "nominal"}]
       }
     }, {
       "mark": "bar",
@@ -43,6 +45,8 @@
         "x": {"field": "Country Name", "type": "nominal", "sort": { "field": "2019", "op": "average", "order":"descending"}},
         "y": {"field": "baseline", "type": "quantitative", "title": "CO2 Emissions Per Capita"},
         "y2": {"field": "2019"},
+        "tooltip": [{"field": "2019", "type": "quantitative"}, 
+      {"field": "Country Name", "type": "nominal"}],
         "color": {"value": "#e45752"}
       }
     }
