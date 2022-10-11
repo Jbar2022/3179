@@ -3,22 +3,55 @@
   "title": "Hazardous CO2 Emissions Per Capita",
   "width": "container",
   "height": 400,
-
+  "params": [
+    {
+    "name": "Continent_selection",
+    "bind": {
+      "input": "select",
+      "options": [
+        null,
+        "Latin America & Caribbean",
+        "South Asia",
+        "Sub-Saharan Africa",
+        "Europe & Central Asia",
+        "Middle East & North Africa",
+        "East Asia & Pacific",
+        "North America"
+      ],
+      "labels":[
+        "Show All",
+        "Latin America & Caribbean",
+        "South Asia",
+        "Sub-Saharan Africa",
+        "Europe & Central Asia",
+        "Middle East & North Africa",
+        "East Asia & Pacific",
+        "North America"
+    ],
+    "name": "Continent Selection: "
+      }
+    }
+  ],
   "layer": [{
     "data": {
       "url": "https://raw.githubusercontent.com/Jbar2022/3179/main/data/CO2_emission.csv"
     },
+      
     "layer": [{
       "transform": [
+        {"filter": "Continent_selection == null || datum.Region == Continent_selection"},
+        {"filter": {"field": "2019", "gt": 0}},
         {
           "window": [{
             "op": "rank",
             "as": "rank"
           }],
           "sort": [{ "field": "2019", "order": "descending" }]
-        }, {
+        }, 
+        {
           "filter": "datum.rank <= 25"
         }
+
       ],
       "mark": {"type": "bar"},
       "encoding": {
@@ -30,15 +63,17 @@
     }, {
       "mark": "bar",
       "transform": [
+        {"filter": "Continent_selection == null || datum.Region == Continent_selection"}, 
         {
           "window": [{
             "op": "rank",
             "as": "rank"
           }],
           "sort": [{ "field": "2019", "order": "descending" }]
-        }, 
+        },
         {"filter": "datum.rank <= 25"},
         {"filter": {"field": "2019", "gt": 2.3}},
+
         {"calculate": "2.31", "as": "baseline"}
       ],
       "encoding": {
