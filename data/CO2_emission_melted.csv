@@ -1,4 +1,4 @@
-Country Name,country_code,Region,Indicator Name,Year,value
+Country_Name,country_code,Region,Indicator Name,Year,value
 Aruba,ABW,Latin America & Caribbean,CO2 emissions (metric tons per capita),1990,
 Afghanistan,AFG,South Asia,CO2 emissions (metric tons per capita),1990,0.191745115
 Angola,AGO,Sub-Saharan Africa,CO2 emissions (metric tons per capita),1990,0.553661955
