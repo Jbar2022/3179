@@ -1,6 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "CO2 Emissions Over Time",
-    "width": 800,
-    "height": 400
+    "width": "container",
+    "height": 400,
+    "data": {
+        "url": "https://raw.githubusercontent.com/Jbar2022/3179/main/data/CO2_emission.csv"
+      }
 }
