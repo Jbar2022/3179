@@ -32,11 +32,12 @@
       "field": "Year",
       "type": "temporal",
       "scale": {"domain": {"param": "brush"}},
-      "axis": {"title": ""}
+      "axis": {"title": "", "labelFontSize": 12}
     },
     "y": {"field": "value", 
-    "type": "quantitative",
-    "title": "CO2 Emissions"},
+      "type": "quantitative",
+      "title": "CO2 Emissions",
+      "axis": {"labelFontSize": 11.5}},
     "tooltip": [{"field": "Year", "type": "temporal"}, {"field": "value", "title": "CO2 Emissions per Capita"}]
   }
 }, {
@@ -50,13 +51,14 @@
   "encoding": {
     "x": {
       "field": "Year",
-      "type": "temporal"
+      "type": "temporal",
+      "axis": {"labelFontSize": 12}
     },
     "y": {
       "field": "value",
       "title": "CO2 Emissions",
       "type": "quantitative",
-      "axis": {"tickCount": 3, "grid": false}
+      "axis": {"tickCount": 3, "grid": false, "labelFontSize": 11.5}
     }
   }
 }]

@@ -55,8 +55,8 @@
       ],
       "mark": {"type": "bar"},
       "encoding": {
-        "x": {"field": "Country Name", "type": "nominal", "axis": {"labelAngle": 270}, "sort": { "field": "2019", "op": "average", "order":"descending"}},
-        "y": {"field": "2019", "type": "quantitative"},
+        "x": {"field": "Country Name", "type": "nominal", "axis": {"labelAngle": 305, "labelFontSize": 13}, "sort": { "field": "2019", "op": "average", "order":"descending"}},
+        "y": {"field": "2019", "axis": {"labelFontSize": 13}, "type": "quantitative"},
       "tooltip": [{"field": "Country Name", "type": "nominal"},
       {"field": "2019", "type": "quantitative", "title": "CO2 Emissions per Person"}]
       }
@@ -82,7 +82,7 @@
         "y2": {"field": "2019"},
         "tooltip": [{"field": "Country Name", "type": "nominal"},
         {"field": "2019", "type": "quantitative", "title": "CO2 Emissions per Person"}],
-        "color": {"value": "#e45752"}
+        "color": {"value": "#e31a1c"}
       }
     }
   ]}, {
@@ -102,6 +102,7 @@
         "dx": -2,
         "dy": -2,
         "x": "width",
+        "fontSize": 13,
         "text": "Goal (2.3 Tons)"
       }
     }]
