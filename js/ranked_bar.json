@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Hazardous CO2 Emissions Per Capita",
-  "width": "container",
+  "width": 600,
   "height": 400,
   "params": [
     {
@@ -49,7 +49,7 @@
           "sort": [{ "field": "2019", "order": "descending" }]
         }, 
         {
-          "filter": "datum.rank <= 25"
+          "filter": "datum.rank <= 20"
         }
 
       ],
@@ -57,10 +57,40 @@
       "encoding": {
         "x": {"field": "Country Name", "type": "nominal", "axis": {"labelAngle": 305, "labelFontSize": 13}, "sort": { "field": "2019", "op": "average", "order":"descending"}},
         "y": {"field": "2019", "axis": {"labelFontSize": 13}, "type": "quantitative"},
+        "color": {"value": "#fecc5c"},
       "tooltip": [{"field": "Country Name", "type": "nominal"},
       {"field": "2019", "type": "quantitative", "title": "CO2 Emissions per Person"}]
       }
-    }, {
+    }, 
+    {
+      "transform": [
+        {"filter": "Continent_selection == null || datum.Region == Continent_selection"},
+        {"filter": {"field": "2019", "gt": 0}},
+        {
+          "window": [{
+            "op": "rank",
+            "as": "rank"
+          }],
+          "sort": [{ "field": "2019", "order": "descending" }]
+        }, 
+        {
+          "filter": "datum.rank <= 20"
+        }
+
+      ],
+      "mark": {"type": "text",
+      "dy": -10,
+      "dx": 1,
+      "limit":30,
+      "ellipsis": " "},
+      
+      "encoding": {
+        "text": {"field": "2019", "type": "quantitative"},
+        "x": {"field": "Country Name", "type": "nominal"},
+        "y": {"field": "2019", "type": "quantitative"}
+      }
+    },
+    {
       "mark": "bar",
       "transform": [
         {"filter": "Continent_selection == null || datum.Region == Continent_selection"}, 
@@ -71,7 +101,7 @@
           }],
           "sort": [{ "field": "2019", "order": "descending" }]
         },
-        {"filter": "datum.rank <= 25"},
+        {"filter": "datum.rank <= 20"},
         {"filter": {"field": "2019", "gt": 2.3}},
 
         {"calculate": "2.31", "as": "baseline"}
@@ -82,9 +112,10 @@
         "y2": {"field": "2019"},
         "tooltip": [{"field": "Country Name", "type": "nominal"},
         {"field": "2019", "type": "quantitative", "title": "CO2 Emissions per Person"}],
-        "color": {"value": "#e31a1c"}
+        "color": {"value": "#bd0026"}
       }
     }
+    
   ]}, {
     "data": {
        "values": [{}]
@@ -97,6 +128,7 @@
     }, {
       "mark": {
         "type": "text",
+        "fontWeight":"bold",
         "align": "right",
         "baseline": "bottom",
         "dx": -2,
@@ -107,5 +139,6 @@
       }
     }]
   }
+
 ]
 }

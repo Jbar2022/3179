@@ -14,7 +14,7 @@
   <!-- Google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather&display=swap" rel="stylesheet">
   
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
@@ -27,20 +27,27 @@
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h1 id = "title" >CO2 Emissions Around the World</h1>
-        <p id = "textstuff" >An interactive visualisation by Justin Barugahare</p>
+        <h1 id = "title" style="font-size: 50px;" >Carbon Emissions Around the World</h1>
+        <p id = "textstuff" style="color:rgb(0, 0, 0)" >An interactive visualisation by Justin Barugahare</p>
       </div>
     </div>
 
 <!-- pure grid group -->
 <div class="pure-g">
-  <div class="pure-u-2-3">
+  <div class="pure-u-3-5">
     <div id="choropleth_map" class="vis-container"></div>
   </div>
-  <div class="pure-u-1-3">
+  <div class="pure-u-2-5">
     <div class="description description-right">
-      <h2 id = "map" >Choropleth Map</h2>
-      <p id = "maptext" >Text</p>
+      <h2 id = "map" ><br>Rising Hazardous Emissions</h2>
+      <p id = "maptext"><br><br><br><br><br><br>Global warming has become a more concerning issue over the years.
+
+        Taking a look at CO2 Emissions from different countries, we notice a trend with developing and developed countries where many
+        developing countries (e.g. such as <span class = 'safe_text'>Tanzania</span>) tend to have low CO2 Emissions per person in comparison to developed countries 
+        (e.g. such as <span class = 'dangerous_text'>Australia</span> and <span class = 'dangerous_text'>Canada</span>).
+        
+
+      </p>
     </div>
   </div>
 
@@ -49,13 +56,17 @@
 
 <!-- pure grid group -->
 <div class="pure-g">
-  <div class="pure-u-1-2">
+  <div class="pure-u-2-5">
     <div class="description description-left">
-      <h2 id = "overviewt" >Overview</h2>
-      <p id = "overviewtext" >Text</p>
+      <h2 id = "overviewt" >Hazardous Carbon Emissions</h2>
+      <p id = "overviewtext" ><br><br><br><br><br><br>This makes sense as individuals from developed countries would spend a lot more energy
+        and use transport more often than those from developing countries.
+        <br><br>
+        The graph provides an overview of carbon emissions from different countries from 1990-2019. 
+        Click and drag over the bottom graph to change the time period of the top graph to get a more detailed view of trends.</p>
     </div>
   </div>
-  <div class="pure-u-1-2">
+  <div class="pure-u-3-5">
     <div id="overview" class="vis-container"></div>
   </div>
 </div>
@@ -63,13 +74,16 @@
 
 <!-- pure grid group -->
 <div class="pure-g">
-  <div class="pure-u-1-2">
+  <div class="pure-u-3-5">
     <div id="overview2" class="vis-container"></div>
   </div>
-  <div class="pure-u-1-3">
+  <div class="pure-u-2-5">
     <div class="description description-right">
-      <h2 id = "overview2t" >Overview</h2>
-      <p id = "overview2text" >Text</p>
+      <h2 id = "overview2t" >Evolving Populations</h2>
+      <p id = "overview2text" ><br><br><br><br><br><br>It’s interesting to observe that many nations and areas can have a large population 
+        and population growth, yet contrastingly, have low co2 per capita and vice versa. <br><br>Some striking examples of this phenomena
+         are the differences between 
+        <span class = 'safe_text'>India</span> and <span class = 'dangerous_text'>Australia</span>.</p>
     </div>
   </div>
 </div>
@@ -77,16 +91,23 @@
 
 <!-- pure grid group -->
 <div class="pure-g">
-  <div class="pure-u-1-3">
-    <div class="description description-right">
-      <h2 id = "bar" >Bar Chart</h2>
-      <p id = "bartext" >Text</p>
+  <div class="pure-u-1-2">
+    <div class="description description-left">
+      <h2 id = "bar" ><br>Rankings of Carbon Emisssions per Capita</h2>
+      <p id = "bartext" ><br><br><br><br><br><br>A 
+      <a href="https://www.oxfam.org/en/press-releases/carbon-emissions-richest-1-set-be-30-times-15degc-limit-2030"><span class = 'dangerous_text'>study</span></a> conducted last year stated that in order to safely fall within the goal set by 2015 governments
+      to limiting global warming to 1.5 degrees celsius, we would need to have every person emit on average 2.3 tons of CO2 per year by 2030. 
+      As shown by the accompanying graph, many countries are unfortunately not reaching this goal currently.
+      <br><br><br><br> If you wish to do further reading on the topic, I highly recommend the link above and the links to the datasets below.
+      <br><br><br><br><br><br><br>Datasets used:<br><br>
+      <a href=https://www.kaggle.com/datasets/cityapiio/world-cities-average-internet-prices-2010-2020><span class = 'dangerous_text'>CO2 Emissions Datast</span></a> <br><br>
+      <a href=https://www.kaggle.com/datasets/ramjasmaurya/1-gb-internet-price/versions/6?resource=download><span class = 'dangerous_text'>World Population Dataset</span></a>
+    </p>
     </div>
   </div>
-  <div class="pure-u-2-3">
+  <div class="pure-u-1-2">
     <div id="ranked_bar" class="vis-container"></div>
   </div>
-
 </div>
 <!-- end pure grid group -->
 
